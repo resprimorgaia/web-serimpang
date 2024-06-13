@@ -1,0 +1,289 @@
+/* Styleguide */
+@import "styleguide.css";
+
+/* Body Section */
+body {
+  position: relative;
+}
+
+/* Navbar Section */
+.navbar {
+  background-color: var(--green-primary);
+}
+
+/* Serimpang Top Section */
+.serimpang {
+  background-color: var(--cream);
+  padding: 7rem 0 13rem 0;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.title > h3 {
+  color: var(--greenish-black);
+  font-size: 26px;
+}
+
+.title > img {
+  margin: 0 auto;
+}
+
+form > .input-group {
+  box-shadow: 0px 0px 30px var(--shadow-3);
+  border-radius: 0.5rem;
+  height: 100px;
+}
+
+#upload {
+  opacity: 0;
+}
+
+#upload-label {
+  display: block;
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+}
+
+.input-group .btn {
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.input-group-append > label {
+  top: 27%;
+  background-color: var(--purple-white);
+  border-color: var(--purple-white-light);
+}
+
+.input-group-append i {
+  margin-right: 10px;
+}
+
+form > .image-area {
+  position: relative;
+  border: 2px dashed var(--red-black);
+  border-radius: 0.5rem;
+  padding: 1.1rem;
+}
+
+form > .image-area::before {
+  content: "Hasil Gambar yang Diunggah";
+  color: var(--red-black-8);
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+form > .image-area > img {
+  position: relative;
+  z-index: 2;
+}
+
+.serimpang button {
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: var(--green-light);
+  background-color: var(--green-light);
+  box-shadow: 0px 0px 30px var(--shadow-3);
+}
+
+.serimpang button:active {
+  border-color: var(--green-light) !important;
+  background-color: var(--green-primary) !important;
+}
+
+.serimpang button:hover {
+  border-color: var(--cream);
+  background-color: var(--green-primary);
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #upload-label {
+    font-size: 14px;
+  }
+}
+
+/* Serimpang Mid Section */
+.default-images {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.message-section {
+  flex: 1;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.try-image-message {
+  text-align: left;
+  font-size: 13px;
+  width: 80%;
+}
+
+.image-section {
+  width: auto;
+  margin-right: 20px;
+}
+
+.try-images {
+  display: flex;
+}
+
+.try-image {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.try-image:hover {
+  transform: scale(1.05);
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .default-images {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .message-section {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: -15px; 
+  }
+
+  .try-image-message {
+    text-align: center;
+    width: 100%;
+  }
+
+  .image-section {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .try-images {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .try-image {
+    margin: 5px;
+  }
+}
+
+/* Pop-up modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--black-light);
+  padding-top: 200px;
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid var(--white-light-shade);
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.flash-message {
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.modal-content {
+  -webkit-animation-name: scaleIn;
+  -webkit-animation-duration: 0.3s;
+  animation-name: scaleIn;
+  animation-duration: 0.3s;
+}
+
+@-webkit-keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .modal {
+    padding-top: 300px;
+  }
+}
+
+/* Footer Section */
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 4rem;
+  background-color: var(--green-primary);
+  display: flex;
+}
+
+.footer > .container {
+  margin: auto;
+}
+
+.footer-content > p {
+  margin: 0;
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .footer-content > p {
+    font-size: 14px;
+  }
+}

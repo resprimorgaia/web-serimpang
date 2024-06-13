@@ -1,0 +1,87 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Serimpang{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/class-serimpang.css') }}">
+{% endblock %}
+
+{% block content %}
+<main data-flash="{{ get_flashed_messages()|length > 0 }}">
+    <!-- Predict Section Begin -->
+    <section class="serimpang">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title text-center mb-5">
+                        <h3 class="fw-bold mb-5">Klasifikasi Simplisia Rimpang</h3>
+                        <img src="{{ url_for('static', filename='img/gallery-image.svg') }}" alt="image" width="150">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 mx-auto">
+                    <form id="upload-form" action="{{ url_for('result_class_serimpang') }}" method="POST" enctype="multipart/form-data">
+                        <div class="input-group bg-white mb-4 p-2">
+                            <input onchange="readURL(this);" name="file" type="file" id="upload" class="form-control">
+                            <div class="input-group-append">
+                                <label for="upload" class="btn btn-light">
+                                    <i class="fas fa-cloud-upload-alt text-muted"></i>
+                                    <small class="text-uppercase fw-normal text-muted">Pilih File</small>
+                                </label>
+                            </div>
+                            <label id="upload-label" class="fw-normal text-muted">Drop Gambar Disini</label>
+                        </div>
+                        <div class="default-images">
+                            <div class="message-section">
+                                <p class="try-image-message"><span class="fw-bold">Tidak ada gambar?</span> Coba salah satu dari ini:</p>
+                            </div>
+                            <div class="image-section">
+                                <div class="try-images">
+                                    <img src="{{ url_for('static', filename='img/try/image1.jpg') }}" alt="Default Image 1" class="try-image">
+                                    <img src="{{ url_for('static', filename='img/try/image2.jpg') }}" alt="Default Image 2" class="try-image">
+                                    <img src="{{ url_for('static', filename='img/try/image3.jpg') }}" alt="Default Image 3" class="try-image">
+                                    <img src="{{ url_for('static', filename='img/try/image4.jpg') }}" alt="Default Image 4" class="try-image">
+                                </div>
+                            </div>
+                        </div>                        
+                        <p class="fst-italic text-center">Gambar yang diunggah akan dirender di dalam kotak di bawah ini. Pastikan gambar yang diunggah memiliki format jpg, jpeg, atau png.</p>
+                        <div class="image-area bg-white my-4">
+                            <img id="imageResult" src="" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
+                        </div>
+                        <button type="submit" class="btn btn-dark">Klasifikasi</button>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Predict Section End -->
+
+    <!-- Pop-up modal untuk pesan flash Begin -->
+    <div id="flashModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="flash-message">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+    <!-- Pop-up modal untuk pesan flash End -->
+</main>
+{% endblock %}
+
+{% block footer %}
+{% include 'includes/footer.html' %}
+{% endblock %}
+
+<!-- scripts JS-->
+{% block javascripts %}
+<script src="{{ url_for('static', filename='js/script-class-serimpang.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+{% endblock %}

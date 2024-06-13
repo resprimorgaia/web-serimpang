@@ -1,0 +1,30 @@
+{
+  "jahe": {
+    "nama_tanaman_asal": "Zingiber officinale (Roscoe)",
+    "keluarga": "Zingiberaceae",
+    "zat_berkhasiat_utama": "Pati, damar, oleo resin, gingerin, minyak astiri yang mengandung zingeron, zingiberol, zingiberin, borneol, kamfer, sineol, dan felandren",
+    "fungsi_empiris": "Karminativa, stimulansia, dan diaforetika",
+    "pemerian": "Berupa irisan rimpang, agak pipih, bentuk lonjong, bulat telur, pada setiap cabang terdapat parut melekuk ke dalam, setiap irisan terbagi menjadi tiga bagian, lapisan paling luar kasar, lapisan sebelah dalam halus, terdapat pembatas diantara lapisan sebelah dalam, bekas patahan pendek dan berserat menonjol; lapisan luar berwarna cokelat kekuningan, lapisan dalam berwarna putih kekuningan, terdapat warna kebiruan pada bagian serat; bau khas; rasa pedas"
+  },
+  "kunyit": {
+    "nama_tanaman_asal": "Curcuma domestica (Val)",
+    "keluarga": "Zingiberaceae",
+    "zat_berkhasiat_utama": "Minyak astiri, zat warna kurkumin, pati, dan damar",
+    "fungsi_empiris": "Karminativa, antidiare, kolagoga, dan skabisida",
+    "pemerian": "Berupa irisan melintang rimpang, ringan, rapuh, bentuk hampir bulat sampai bulat panjang, kadang-kadang bercabang, umumnya melengkung tidak beraturan, kadang-kadang terdapat pangkal upih daun dan pangkal akar, permukaan luar kasar, terdapat bekas ruas-ruas, permukaan dalam dengan batas korteks dan silinder pusat yang jelas, bekas patahan agak rata, berdebu; warna kuning jingga, kuning jingga kemerahan sampai kuning jingga kecokelatan, bekas patahan kuning jingga sampai cokelat kemerahan; bau khas; rasa agak pahit, agak pedas, lama kelamaan menimbulkan rasa tebal"
+  },
+  "lengkuas": {
+    "nama_tanaman_asal": "Alpina officinarum (Hance), Alpina galanga (L), Languas galanga (L)",
+    "keluarga": "Zingiberaceae",
+    "zat_berkhasiat_utama": "Minyak astiri yang mengandung; metilsinamat, sineol, kamfer, dan galangol",
+    "fungsi_empiris": "Bumbu, karminativa, dan antifungi",
+    "pemerian": "Berupa irisan membujur, permukaan tidak rata, terdiri atas dua lapisan, lapisan luar kaku dan kasar, lapisan dalam tampak serat-serat kasar, terdapat pembatas di lapisan dalam, patahan rimpang berserat; lapisan luar merah kecokelatan, lapisan dalam putih kekuningan atau putih kecokelatan; bau khas; rasa agak pedas"
+  },
+  "temulawak": {
+    "nama_tanaman_asal": "Curcuma xanthorrhiza (Roxb)",
+    "keluarga": "Zingiberaceae",
+    "zat_berkhasiat_utama": "Minyak astiri yang mengandung felandren dan tumerol, zat warna kurkumin dan pati. Kadar minyak astiri tidak kurang dari 8,2% b/v",
+    "fungsi_empiris": "Kolagoga dan antispasmodika",
+    "pemerian": "Berupa irisan rimpang, keping tipis, bentuk bulat atau agak jorong, ringan, keras, mudah patah, permukaan luar berkerut, warna cokelat kuning hingga cokelat, bidang irisan melengkung tidak beraturan, tidak rata, sering dengan tonjolan melingkar pada batas antara korteks dengan silinder pusat, korteks sempit, bekas patahan berdebu; warna kuning jingga hingga cokelat jingga terang; bau khas aromatik; rasa tajam dan pahit"
+  }
+}

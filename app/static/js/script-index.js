@@ -1,9 +1,20 @@
 "use strict";
-import question from "../data/faq.json" assert {type: "json"};
 
-// FAQ
-const faqItems = document.getElementById("faq-list");
+// Fungsi untuk mengambil data dari API
+async function fetchFaqData() {
+    try {
+        const response = await fetch('../static/data/faq.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching FAQ data:", error);
+    }
+}
 
+// Fungsi untuk merender pertanyaan
 function renderQuestions(data) {
     return data.map(values => `<div class="faq-item mb-3" data-aos="fade-down" data-aos-duration="1000">
         <a class="btn" data-bs-toggle="collapse" href="#collapseExample${values.id}" role="button"
@@ -17,6 +28,12 @@ function renderQuestions(data) {
     </div>`).join('');
 }
 
-faqItems.innerHTML = renderQuestions(question);
+// Ambil elemen HTML untuk FAQ
+const faqItems = document.getElementById("faq-list");
 
-
+// Ambil data dan render
+fetchFaqData().then(data => {
+    if (data) {
+        faqItems.innerHTML = renderQuestions(data);
+    }
+});
